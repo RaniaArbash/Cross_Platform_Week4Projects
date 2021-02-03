@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+            xmlns:local="clr-namespace:Week4Projects"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Week4Projects.TableViewPage">
+    <TableView Intent="Form">
+            <TableRoot>
+                <TableSection Title="Basics">
+                    <TextCell Text="Mary" Detail="2784844"/>
+                    <EntryCell Label="Email" Placeholder="Enter Your email"/>
+                    <SwitchCell Text="Notifications" On="True" />
+                </TableSection>
+             <TableSection Title="Dates">
+
+                 <local:DateCell Label="Starts" LabelColor="Blue"/>
+                 <local:DateCell Label="Ends" LabelColor="Red"/>
+             </TableSection>
+
+
+            </TableRoot>
+       
+
+    </TableView>
+</ContentPage>

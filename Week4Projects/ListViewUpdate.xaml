@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Week4Projects.ListViewUpdate">
+    
+
+
+    <RelativeLayout>
+        <StackLayout 
+                 HorizontalOptions="Fill" VerticalOptions="Center"
+        RelativeLayout.HeightConstraint="{ConstraintExpression
+                 Type=RelativeToParent,
+                 Property=Height,
+                Factor=0.5}"
+        RelativeLayout.WidthConstraint="{ ConstraintExpression
+        Type=RelativeToParent,
+        Property=Width,
+        Factor=1}">
+       <Entry x:Name="updatedName" Placeholder="Name"/>
+        <Entry x:Name="updatedNumber" Placeholder="Number"/>
+            <Button Text="Update" Clicked="Update_Clicked"/>
+
+    </StackLayout>
+
+
+    <ListView x:Name="mylist" HasUnevenRows="True"
+              ItemSelected="mylist_ItemSelected"
+              RelativeLayout.YConstraint="{ConstraintExpression
+                Type=RelativeToParent,Property=Height, Factor=0.5}"
+              >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding name}"
+                           Detail="{Binding number}"
+                           TextColor="Black"
+                           DetailColor="Red"
+                           
+                           >
+                    <TextCell.ContextActions>
+                        <MenuItem Text="Call" Clicked="call_Clicked" CommandParameter="{Binding .}"/>
+                        <MenuItem Text="Delete" IsDestructive="True" CommandParameter="{Binding .}" Clicked="delete_Clicked"/>
+                    </TextCell.ContextActions>
+
+                </TextCell>
+
+            </DataTemplate>
+        </ListView.ItemTemplate>
+
+
+    </ListView>
+</RelativeLayout>
+</ContentPage>

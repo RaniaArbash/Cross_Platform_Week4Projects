@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    Padding="0,20,0,0"
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Week4Projects.CalculatorPage">
+  <RelativeLayout>
+   <StackLayout>
+        <Image Source="https://images.freeimages.com/images/small-previews/39a/no-grain-no-pain-1326753.jpg"
+             RelativeLayout.HeightConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Height,
+                Factor=0.3}"
+
+                RelativeLayout.WidthConstraint="{ConstraintExpression
+                Type=RelativeToParent,
+                Property=Width,
+                Factor=0.5}"
+
+             />
+   <Grid Padding="10" x:Name="grid"
+                RowSpacing="4"
+                ColumnSpacing="4"
+
+       RelativeLayout.HeightConstraint="{ConstraintExpression
+        Type=RelativeToParent,
+        Property=Height,
+        Factor=0.3}"
+       RelativeLayout.WidthConstraint="{ConstraintExpression
+        Type=RelativeToParent,
+        Property=Width,
+       Factor=1}"
+       >
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.ColumnSpan="2" Text="" HorizontalOptions="Center" TextColor="Black" x:Name="number"/>
+        <Button Grid.Row="1" Grid.Column="0" Text="1" TextColor="Red" BackgroundColor="Blue" BorderRadius="10" Clicked="Number_Clicked"/>
+        <Button Grid.Row="1" Grid.Column="1" Text="2" TextColor="Yellow" BackgroundColor="Blue" BorderRadius="10" Clicked="Number_Clicked"/>
+        <Button Grid.Row="1" Grid.Column="2" Text="3" TextColor="Yellow" BackgroundColor="Blue" BorderRadius="10" Clicked="Number_Clicked"/>
+        <Button Grid.Row="2" Grid.Column="0" Text="4" TextColor="Yellow" BackgroundColor="Blue" BorderRadius="10" Clicked="Number_Clicked"/>
+        <Button Grid.Row="2" Grid.Column="1" Text="5" TextColor="Yellow" BackgroundColor="Blue" BorderRadius="10" Clicked="Number_Clicked"/>
+        <Button Grid.Row="2" Grid.Column="2" Text="6" TextColor="Yellow" BackgroundColor="Blue" BorderRadius="10" Clicked="Number_Clicked"/>
+        <Button Grid.Row="3" Grid.Column="0" Text="7" TextColor="Yellow" BackgroundColor="Blue" BorderRadius="10" Clicked="Number_Clicked"/>
+        <Button Grid.Row="3" Grid.Column="1" Text="8" TextColor="Yellow" BackgroundColor="Blue" BorderRadius="10" Clicked="Number_Clicked"/>
+        <Button Grid.Row="3" Grid.Column="2" Text="9" TextColor="Yellow" BackgroundColor="Blue" BorderRadius="10" Clicked="Number_Clicked"/>
+        <Button Grid.Row="4" Grid.Column="1" Text="0" TextColor="Yellow" BackgroundColor="Blue" BorderRadius="10" Clicked="Number_Clicked"/>
+        <Button Grid.Row="4" Grid.Column="2" Text="Clear" FontSize="10" TextColor="#28282c" BackgroundColor="#fff" BorderRadius="10" Clicked="Clear_Clicked"/>
+
+        <Button Grid.Row="1" Grid.Column="3" Text="+" BackgroundColor="Aqua" FontSize="Default" Clicked="Button_Clicked"/>
+        <Button Grid.Row="2" Grid.Column="3" Text="-" BackgroundColor="Aqua" FontSize="Default" Clicked="Button_Clicked"/>
+        <Button Grid.Row="3" Grid.Column="3" Text="*" BackgroundColor="Aqua" FontSize="Default" Clicked="Button_Clicked"/>
+        <Button Grid.Row="4" Grid.Column="3" Text="/" BackgroundColor="Aqua" FontSize="Default" Clicked="Button_Clicked"/>
+        <Button Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" Text="=" BackgroundColor="Aqua" FontSize="Default" Clicked="Button_Clicked"/>
+
+
+    </Grid>
+
+        <ListView x:Name="mylist"
+                  RelativeLayout.HeightConstraint="{ConstraintExpression
+        Type=RelativeToParent,
+        Property=Height,
+        Factor=0.3}"
+
+        RelativeLayout.WidthConstraint="{ConstraintExpression
+        Type=RelativeToParent, Property=Width, Factor=1}"/>
+         
+       
+   </StackLayout>
+</RelativeLayout>
+</ContentPage>
+
+
